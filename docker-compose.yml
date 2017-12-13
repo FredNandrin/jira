@@ -8,7 +8,11 @@ jira:
 
 jira-db:
   container_name: jira-db
-  image: postgres
+  image: postgres:9.5
+  environment:
+      - POSTGRES_USER=jira
+      - POSTGRES_PASSWORD=xxxxxx-changeme-xxxxxxxx
+      - POSTGRES_DB=jira-db
 
 confluence:
   container_name: confluence
